@@ -1,0 +1,122 @@
+:root {
+    --body_font: Heebo, sans-serif;
+    --title_font: Bungee, cursive;
+    --box_font: Bungee Shade, cursive;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Set fonts */
+h1,
+h2 {
+    font-family: var(--title_font)
+}
+
+p,
+h3,
+h4 {
+    font-family: var(--body_font)
+}
+
+/* Body Defaults */
+body {
+    min-height: 100vh;
+    text-rendering:optimizeSpeed;
+    line-height: 1rem;
+    font-family: var(--body_font);
+    font-size: 1rem;
+    padding: 2rem 0;
+}
+
+/* Image Defaults */
+img,
+picture {
+    max-width: 100%;
+    display:block;
+}
+
+/* Buttons inherit fonts of parent */
+button,
+input {
+    font:inherit;
+}
+
+.container {
+    max-width:100rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+
+/* ^^ PROJECTS SECTION ^^ */
+
+.project-title:before {
+
+}
+
+/* Set all project cards into grids of equal size */
+.project-grid {
+    text-align: center;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.project-card > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.project-card {
+    display: grid;
+    /* border: 5px solid teal; */
+    aspect-ratio: 1 / 1.1;
+}
+
+/* Set Images to Same size in each card, crop if necessary */
+.project-img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: cover;
+}
+
+.card-contents {
+    justify-self:center;
+    width:98%;
+    background: white;
+    align-self: end;
+    margin: 0.1rem 0.1rem 0rem;
+    padding: 0.1rem;
+    box-shadow: 0 0.2rem 0.2rem rgba(0,0,0, 0.2); 
+}
+
+.card-title {
+    font-size: 1.4rem;
+    color: teal;
+    line-height: 1.1;
+}
+
+.project-description {
+    font-size: 1.2rem;
+}
+
+/* For Desktop Viewsize */
+@media (min-width: 60rem) {
+    .project-img{
+        aspect-ratio: 1 / 1;
+    }
+    .card-title {
+        font-size: 1.2rem;
+    }
+    .project-description {
+        font-size: 1rem;
+    }
+}
+
+/* ^^ CONTACT SECTION ^^ */
