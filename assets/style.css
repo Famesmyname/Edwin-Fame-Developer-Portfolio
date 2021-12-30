@@ -31,14 +31,15 @@ body {
     line-height: 1rem;
     font-family: var(--body_font);
     font-size: 1rem;
-    padding: 2rem 0;
 }
+
 
 /* Image Defaults */
 img,
 picture {
     max-width: 100%;
-    display:block;
+    display: block;
+    overflow: hidden;
 }
 
 /* Buttons inherit fonts of parent */
@@ -47,11 +48,56 @@ input {
     font:inherit;
 }
 
+/* Define each "section" as containers */
 .container {
     max-width:100rem;
     margin-inline: auto;
     padding-inline: 2rem;
 }
+/* ^^ SPLASH PAGE ^^ */
+.splashpage {
+    line-height: 3rem;
+    display:flex;
+    text-align:center;
+    padding: 0;
+    --splashcolor: #2a607c;
+    background-color: var(--splashcolor);
+    color: white;
+    left: 0;
+    top: 0;
+    position: static;
+    height:100vh;
+    Width:100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-hello {
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.edwin {
+    color: plum;
+}
+.splash-footer {
+    margin-top: 5rem;
+}
+.splash-btn {
+    border: 0.1rem line black;
+    border-style:solid;
+    border-radius: 0.5rem;
+    background-color:inherit;
+    color: whitesmoke;
+}
+
+.splash-btn:hover, .splash-btn:focus {
+    background: plum;
+    color: var(--splashcolor);
+}
+
+/* ^^ ABOUT ME SECTION ^^ */
+
 
 
 /* ^^ PROJECTS SECTION ^^ */
@@ -77,6 +123,11 @@ input {
     display: grid;
     /* border: 5px solid teal; */
     aspect-ratio: 1 / 1.1;
+    transition: 150ms transform ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
 }
 
 /* Set Images to Same size in each card, crop if necessary */
@@ -91,8 +142,8 @@ input {
     width:98%;
     background: white;
     align-self: end;
-    margin: 0.1rem 0.1rem 0rem;
-    padding: 0.1rem;
+    margin: 0rem 0.1rem 0rem;
+    padding: 0 0.1rem;
     box-shadow: 0 0.2rem 0.2rem rgba(0,0,0, 0.2); 
 }
 
